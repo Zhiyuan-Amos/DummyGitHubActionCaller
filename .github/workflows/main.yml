@@ -1,12 +1,13 @@
-on: [workflow_dispatch]
+on:
+  workflow_dispatch:
+    inputs:
+      inline-variable:
+        required: true
 
 jobs:
   dummy_job:
     runs-on: self-hosted
     name: Dummy Job
-    inputs:
-      inline-variable:
-        required: true
     steps:
       - name: Dummy Step
         id: id

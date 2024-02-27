@@ -3,6 +3,7 @@ on:
     inputs:
       inline-variable:
         required: true
+        type: string
 
 jobs:
   dummy_job:
@@ -13,5 +14,5 @@ jobs:
         id: id
         uses: Zhiyuan-Amos/DummyGitHubAction@main
         with:
-          inline-variable: ${{ env.INPUT_INLINE-VARIABLE }}
+          inline-variable: ${{ inputs.inline-variable }}
           configuration-variable: ${{ secrets.CONFIGURATIONVARIABLE }}

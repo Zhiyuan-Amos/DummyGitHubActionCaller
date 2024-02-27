@@ -7,7 +7,7 @@ jobs:
     steps:
       - name: Dummy Step
         id: id
-        uses: Zhiyuan-Amos/DummyGitHubAction
+        uses: Zhiyuan-Amos/DummyGitHubAction@v1.0.1
         with:
           inline-variable: 'a'
           configuration-variable: 'b'

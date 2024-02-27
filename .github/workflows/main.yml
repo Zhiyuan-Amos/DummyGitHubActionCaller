@@ -4,10 +4,13 @@ jobs:
   dummy_job:
     runs-on: self-hosted
     name: Dummy Job
+    inputs:
+      inline-variable:
+        required: true
     steps:
       - name: Dummy Step
         id: id
         uses: Zhiyuan-Amos/DummyGitHubAction@main
         with:
-          inline-variable: 'a'
-          configuration-variable: 'b'
+          inline-variable: ${{ env.INPUT_INLINE-VARIABLE }}
+          configuration-variable: ${{ secrets.CONFIGURATIONVARIABLE }}
